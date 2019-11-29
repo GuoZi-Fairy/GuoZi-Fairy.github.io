@@ -5,17 +5,20 @@
   
 
   
-  <title>果子的测试页 | Hexo</title>
+  <title>果子的测试页 | 果子成精的玄学记录册</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="果子在玄学事业上的修炼将会记录在这里">
+<meta name="keywords" content="道教,NoTag,玄学,偶尔写点代码">
+<meta property="og:type" content="article">
 <meta property="og:title" content="果子的测试页">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;29&#x2F;newpapername&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en">
+<meta property="og:url" content="guozi.pub&#x2F;uncategorized&#x2F;%E6%9E%9C%E5%AD%90%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5">
+<meta property="og:site_name" content="果子成精的玄学记录册">
+<meta property="og:description" content="果子在玄学事业上的修炼将会记录在这里">
+<meta property="og:locale" content="zh">
 <meta property="og:updated_time" content="2019-11-29T09:55:02.826Z">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="果子成精的玄学记录册" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,8 +37,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">果子成精的玄学记录册</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">贫道果子 有何贵干</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -54,7 +61,7 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="guozi.pub"></form>
       </div>
     </div>
   </div>
@@ -62,7 +69,7 @@
       <div class="outer">
         <section id="main"><article id="post-newpapername" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/11/29/newpapername/" class="article-date">
+    <a href="/uncategorized/%E6%9E%9C%E5%AD%90%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5" class="article-date">
   <time datetime="2019-11-29T09:54:22.000Z" itemprop="datePublished">2019-11-29</time>
 </a>
     
@@ -86,7 +93,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/29/newpapername/" data-id="ck3jzaafi00015kuvedue1oad" class="article-share-link">Share</a>
+      <a data-url="guozi.pub/uncategorized/%E6%9E%9C%E5%AD%90%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5" data-id="ck3jzw7s100014kuvh4gn83m6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -96,7 +103,7 @@
 <nav id="article-nav">
   
   
-    <a href="/2019/11/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/uncategorized/hello-world" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">Hello World</div>
     </a>
@@ -135,11 +142,11 @@
       <ul>
         
           <li>
-            <a href="/2019/11/29/newpapername/">果子的测试页</a>
+            <a href="/uncategorized/%E6%9E%9C%E5%AD%90%E7%9A%84%E6%B5%8B%E8%AF%95%E9%A1%B5">果子的测试页</a>
           </li>
         
           <li>
-            <a href="/2019/11/29/hello-world/">Hello World</a>
+            <a href="/uncategorized/hello-world">Hello World</a>
           </li>
         
       </ul>
@@ -154,7 +161,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 John Doe<br>
+      &copy; 2019 Xyg<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
