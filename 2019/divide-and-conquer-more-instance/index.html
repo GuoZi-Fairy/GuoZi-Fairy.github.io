@@ -86,7 +86,7 @@
 <meta property="og:description" content="分治策略的思想概述分治策略即将问题不断拆分成更小的问题，再对一个足够小的问题进行简单的求解。  递归的基本步骤  分解 : 将问题划分为一些更小的问题，问题形式不变，但规模更小。 解决 : 递归的求解出子问题。如果子问题规模足够小则停止递归(该情况称为进入了基本情况,形象的可以想像为&amp;quot;触底&amp;quot;。 合并 : 将子问题的解组合成原问题的解。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
-<meta property="og:updated_time" content="2019-12-11T14:24:30.246Z">
+<meta property="og:updated_time" content="2019-12-11T14:29:00.579Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
 
@@ -328,8 +328,8 @@
 </ol>
 </blockquote>
 <a id="more"></a>
-<h2 id="递归策略的性能分析"><a href="#递归策略的性能分析" class="headerlink" title="递归策略的性能分析"></a>递归策略的性能分析</h2><h3 id="递归策略性能的描述方法"><a href="#递归策略性能的描述方法" class="headerlink" title="递归策略性能的描述方法"></a>递归策略性能的描述方法</h3><p>我们常用递归式的方式来描述一个递归实例在运行时间上的性能<br>$$ T(n)=\begin{cases}<br>    aT(\frac{n}{b}) + \theta(n) &amp;n&gt;1 \\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>其中 <strong><em>a</em></strong> 是分解时产生的子问题的个数，每个子问题是原问题规模的$\frac{1}{b}$ <br>当问题的规模足够小时(即n=1时)我们认为解决该问题只需要常数时间(其上界为一个常数)为$\theta(1)$。<br>所以对于<em>归并排序</em> 而言a=b=2。故其运行时间的描述为<br>$$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1 \\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>对上式求解我们可以得到<em>递归排序</em> 的运行时间的渐近紧上确界为$\theta(n*\lg_2n)$</p>
-<h2 id="递归式的求解方法"><a href="#递归式的求解方法" class="headerlink" title="递归式的求解方法"></a>递归式的求解方法</h2><p>此处介绍<em>算法导论</em> 中给出的三种求解方法\</p>
+<h1 id="递归策略的性能分析"><a href="#递归策略的性能分析" class="headerlink" title="递归策略的性能分析"></a>递归策略的性能分析</h1><h2 id="递归策略性能的描述方法"><a href="#递归策略性能的描述方法" class="headerlink" title="递归策略性能的描述方法"></a>递归策略性能的描述方法</h2><p>我们常用递归式的方式来描述一个递归实例在运行时间上的性能<br>$$ T(n)=\begin{cases}<br>    aT(\frac{n}{b}) + \theta(n) &amp;n&gt;1 \\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>其中 <strong><em>a</em></strong> 是分解时产生的子问题的个数，每个子问题是原问题规模的$\frac{1}{b}$ <br>当问题的规模足够小时(即n=1时)我们认为解决该问题只需要常数时间(其上界为一个常数)为$\theta(1)$。<br>所以对于<em>归并排序</em> 而言a=b=2。故其运行时间的描述为<br>$$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1 \\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>对上式求解我们可以得到<em>递归排序</em> 的运行时间的渐近紧上确界为$\theta(n*\lg_2n)$</p>
+<h1 id="递归式的求解方法"><a href="#递归式的求解方法" class="headerlink" title="递归式的求解方法"></a>递归式的求解方法</h1><p>此处介绍<em>算法导论</em> 中给出的三种求解方法\</p>
 <blockquote>
 <ol>
 <li>代入法</li>
@@ -339,7 +339,7 @@
 </blockquote>
 <hr>
 <p>将会用<em>归并排序</em> 为例来介绍三种求解方法</p>
-<h3 id="代入法"><a href="#代入法" class="headerlink" title="代入法"></a>代入法</h3><blockquote>
+<h2 id="代入法"><a href="#代入法" class="headerlink" title="代入法"></a>代入法</h2><blockquote>
 <p>即猜测一个界，然后用数学归纳法证明界的正确性。(类似于微积分中<em>一阶非齐次线性微分方程</em> 解的公式的推导)<br>使用代入法最好的情况是曾经遇见过很类似的递归式的形式，然后猜测二者解的形式类似</p>
 </blockquote>
 <hr>
@@ -351,11 +351,14 @@
 <li>所以可以推出我们的猜测时正确，即为$T(n)=O(n \log_2^n)$</li>
 </ul>
 </blockquote>
-<h3 id="递归树法"><a href="#递归树法" class="headerlink" title="递归树法"></a>递归树法</h3><blockquote>
+<h2 id="递归树法"><a href="#递归树法" class="headerlink" title="递归树法"></a>递归树法</h2><blockquote>
 <p>将递归式转化为树状结构，其<em>节点</em> 为递归产生的代价，累加各层<em>节点</em> 和<em>叶</em> 来求解递归式。</p>
 </blockquote>
 <hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://q1q8cm6by.bkt.clouddn.com/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg" alt="递归树图示"></h2><h3 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h3><ul>
+<blockquote>
+<p><img src="http://q1q8cm6by.bkt.clouddn.com/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg" alt="递归树图示"></p>
+</blockquote>
+<h2 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h2><ul>
 <li>主方法可求解形如$T(n) = aT(\frac{n}{b})+f(n)$的界,其中$a \geqq 1,b&gt;1,f(n)已知且为渐近正函数$(n足够大时,函数值均为正的函数)</li>
 <li>$T(n) = aT(\frac{n}{b})+f(n)$该式子描述了&quot;生成a个子问题，每个子问题为原问题规模的$\frac{1}{b}$,解决和合并产生的代价为$f(n)$&quot;</li>
 <li>值得注意的是$\frac{n}{b}$并不一定是整数，但在n足够大时,$\frac{n}{b}$与$[\frac{n}{b}]$并不会影响递归式的渐进性质,所以这里我们都将$\frac{n}{b}$当作$[\frac{n}{b}]$</li>
@@ -531,7 +534,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分治策略的思想概述"><span class="nav-number">1.</span> <span class="nav-text">分治策略的思想概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归策略的性能分析"><span class="nav-number">1.1.</span> <span class="nav-text">递归策略的性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#递归策略性能的描述方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">递归策略性能的描述方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归式的求解方法"><span class="nav-number">1.2.</span> <span class="nav-text">递归式的求解方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代入法"><span class="nav-number">1.2.1.</span> <span class="nav-text">代入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归树法"><span class="nav-number">1.2.2.</span> <span class="nav-text">递归树法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">主方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#碎碎念"><span class="nav-number">1.4.</span> <span class="nav-text">碎碎念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分治策略的思想概述"><span class="nav-number">1.</span> <span class="nav-text">分治策略的思想概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归策略的性能分析"><span class="nav-number">2.</span> <span class="nav-text">递归策略的性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归策略性能的描述方法"><span class="nav-number">2.1.</span> <span class="nav-text">递归策略性能的描述方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归式的求解方法"><span class="nav-number">3.</span> <span class="nav-text">递归式的求解方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代入法"><span class="nav-number">3.1.</span> <span class="nav-text">代入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归树法"><span class="nav-number">3.2.</span> <span class="nav-text">递归树法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主方法"><span class="nav-number">3.3.</span> <span class="nav-text">主方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#碎碎念"><span class="nav-number">3.4.</span> <span class="nav-text">碎碎念</span></a></li></ol></li></ol></div>
             
 
           </div>
