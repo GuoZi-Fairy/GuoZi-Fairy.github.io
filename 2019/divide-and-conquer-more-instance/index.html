@@ -77,16 +77,18 @@
 
 
 
-<meta name="description" content="插入排序思想 每步将一个待排序的记录，按其关键码值的大小插入前面已经排序的文件中适当位置上，直到全部插入完为止。  基本信息1.分类：直接插入排序、二分插入排序 2.特点: 稳定的排序方法（相等数不交换位置） 3.时间复杂度:        a.直接插入排序:O(n^2)     b.二分插入排序:O(n*log2(n) )具体实现1&#x2F;&#x2F;可在gcc8.2.0版本中通过编译2#include&amp;lt;">
+<meta name="description" content="分治策略的思想概述分治策略即将问题不断拆分成更小的问题，再对一个足够小的问题进行简单的求解。  递归的基本步骤  分解 : 将问题划分为一些更小的问题，问题形式不变，但规模更小。 解决 : 递归的求解出子问题。如果子问题规模足够小则停止递归(该情况称为进入了基本情况,形象的可以想像为&amp;quot;触底&amp;quot;。 合并 : 将子问题的解组合成原问题的解。   递归策略的性能分析递归策略性能的描述方">
 <meta name="keywords" content="道教,NoTag,玄学,偶尔写点代码">
 <meta property="og:type" content="article">
-<meta property="og:title" content="插入排序">
-<meta property="og:url" content="guozi.pub&#x2F;2019&#x2F;Alg_insertion_Sort&#x2F;index.html">
+<meta property="og:title" content="分治策略的更多实例">
+<meta property="og:url" content="guozi.pub&#x2F;2019&#x2F;divide-and-conquer-more-instance&#x2F;index.html">
 <meta property="og:site_name" content="果子成精的玄学记录册">
-<meta property="og:description" content="插入排序思想 每步将一个待排序的记录，按其关键码值的大小插入前面已经排序的文件中适当位置上，直到全部插入完为止。  基本信息1.分类：直接插入排序、二分插入排序 2.特点: 稳定的排序方法（相等数不交换位置） 3.时间复杂度:        a.直接插入排序:O(n^2)     b.二分插入排序:O(n*log2(n) )具体实现1&#x2F;&#x2F;可在gcc8.2.0版本中通过编译2#include&amp;lt;">
+<meta property="og:description" content="分治策略的思想概述分治策略即将问题不断拆分成更小的问题，再对一个足够小的问题进行简单的求解。  递归的基本步骤  分解 : 将问题划分为一些更小的问题，问题形式不变，但规模更小。 解决 : 递归的求解出子问题。如果子问题规模足够小则停止递归(该情况称为进入了基本情况,形象的可以想像为&amp;quot;触底&amp;quot;。 合并 : 将子问题的解组合成原问题的解。   递归策略的性能分析递归策略性能的描述方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-12-11T09:53:40.078Z">
+<meta property="og:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
+<meta property="og:updated_time" content="2019-12-11T12:15:56.207Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
 
 
 
@@ -116,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="guozi.pub/2019/Alg_insertion_Sort/"/>
+  <link rel="canonical" href="guozi.pub/2019/divide-and-conquer-more-instance/"/>
 
 
 
 
 
-  <title>插入排序 | 果子成精的玄学记录册</title>
+  <title>分治策略的更多实例 | 果子成精的玄学记录册</title>
   
 
 
@@ -249,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="guozi.pub/2019/Alg_insertion_Sort/">
+    <link itemprop="mainEntityOfPage" href="guozi.pub/2019/divide-and-conquer-more-instance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Xyg">
@@ -266,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">插入排序</h1>
+          <h1 class="post-title" itemprop="name headline">分治策略的更多实例</h1>
         
 
         <div class="post-meta">
@@ -278,8 +280,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-30T14:15:21+08:00">
-                2019-11-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-11T20:15:56+08:00">
+                2019-12-11
               </time>
             
 
@@ -288,28 +290,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Introduction-to-Algo/" itemprop="url" rel="index">
-                    <span itemprop="name">Introduction to Algo</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -338,18 +318,58 @@
       
 
       
-        <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><blockquote>
-<p>每步将一个待排序的记录，按其关键码值的大小插入前面已经排序的文件中适当位置上，直到全部插入完为止。</p>
+        <h1 id="分治策略的思想概述"><a href="#分治策略的思想概述" class="headerlink" title="分治策略的思想概述"></a>分治策略的思想概述</h1><p>分治策略即将问题不断拆分成更小的问题，再对一个足够小的问题进行简单的求解。</p>
+<blockquote>
+<p>递归的基本步骤</p>
+<ol>
+<li>分解 : 将问题划分为一些更小的问题，问题形式不变，但规模更小。</li>
+<li>解决 : 递归的求解出子问题。如果子问题规模足够小则停止递归(该情况称为进入了基本情况,形象的可以想像为&quot;触底&quot;。</li>
+<li>合并 : 将子问题的解组合成原问题的解。</li>
+</ol>
 </blockquote>
-<h2 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h2><pre><code>1.分类：直接插入排序、二分插入排序
-2.特点: 稳定的排序方法（相等数不交换位置）
-3.时间复杂度:   
-    a.直接插入排序:O(n^2)
-    b.二分插入排序:O(n*log2(n) )</code></pre><h2 id="具体实现"><a href="#具体实现" class="headerlink" title="具体实现"></a>具体实现</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//可在gcc8.2.0版本中通过编译</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">const</span> <span class="keyword">int</span> length = <span class="number">10</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">int</span> a[length] = &#123;<span class="number">9</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">10</span>,<span class="number">20</span>,<span class="number">3</span>&#125;;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; length;i++)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> key = a[i];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">int</span> j =i<span class="number">-1</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        <span class="keyword">while</span>(a[j] &gt; key &amp;&amp; j &gt; <span class="number">0</span>)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">        &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">            a[j+<span class="number">1</span>] = a[j];</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">            j--;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">        &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        a[j+<span class="number">1</span>] = key;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; length;i++)<span class="built_in">printf</span>(<span class="string">"%d\t"</span>,a[i]);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">19</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">20</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
-<h2 id="循环不变式的证明"><a href="#循环不变式的证明" class="headerlink" title="循环不变式的证明"></a>循环不变式的证明</h2><h3 id="初始"><a href="#初始" class="headerlink" title="初始"></a>初始</h3><p>在第一次迭代之前，即当i=1且没有开始迭代时.对于已经排序好的数组A[0到i-1]即只有一个元素的A[0],当然已经是有序的,故而在初始阶段循环不变式成立。</p>
-<h3 id="保持"><a href="#保持" class="headerlink" title="保持"></a>保持</h3><p>即当1&lt; i&lt; length 时,此时被排序的数key为a[i],若i的前面一个数大于key( i 前方有序)则将A[0,1,2,…,i-1]即i前方所有比key大的元素往右移动一个位置，直到为key找到合适的位置。此时子数组A[0,…,i]有序。推断出每次迭代将保持循环不变式</p>
-<h3 id="终止"><a href="#终止" class="headerlink" title="终止"></a>终止</h3><p>for的终止条件为i = length,但是数组下标从0开始，所以a中所有元素的下标其实为0,1,…,length-1. 当i=length时，子数组A[0,…,i]已经由a[0,1,…,length-1]中的元素有序组成。注意到A已经为整个数组，所以判断整个数组有序。</p>
-<h4 id="PS"><a href="#PS" class="headerlink" title="PS"></a>PS</h4><p>循环不变式的证明只在有必要时(<del>不懒的时候</del>)给出</p>
+<h2 id="递归策略的性能分析"><a href="#递归策略的性能分析" class="headerlink" title="递归策略的性能分析"></a>递归策略的性能分析</h2><h3 id="递归策略性能的描述方法"><a href="#递归策略性能的描述方法" class="headerlink" title="递归策略性能的描述方法"></a>递归策略性能的描述方法</h3><p>我们常用递归式的方式来描述一个递归实例在运行时间上的性能<br>$$ T(n)=\begin{cases}<br>    aT(\frac{n}{b}) + \theta(n) &amp;n&gt;1\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>其中 <strong><em>a</em></strong> 是分解时产生的子问题的个数，每个子问题是原问题规模的$\frac{1}{b}$ <br>当问题的规模足够小时(即n=1时)我们认为解决该问题只需要常数时间(其上界为一个常数)为$\theta(1)$。<br>所以对于<em>归并排序</em> 而言a=b=2。故其运行时间的描述为<br>$$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>对上式求解我们可以得到<em>递归排序</em> 的运行时间的渐近紧上确界为$\theta(n*\lg_2n)$</p>
+<h2 id="递归式的求解方法"><a href="#递归式的求解方法" class="headerlink" title="递归式的求解方法"></a>递归式的求解方法</h2><p>此处介绍<em>算法导论</em> 中给出的三种求解方法\</p>
+<blockquote>
+<ol>
+<li>代入法</li>
+<li>递归树法</li>
+<li>主方法 (主方法将会是求解的最常用的方法)</li>
+</ol>
+</blockquote>
+<hr>
+<p>将会用<em>归并排序</em> 为例来介绍三种求解方法</p>
+<h3 id="代入法"><a href="#代入法" class="headerlink" title="代入法"></a>代入法</h3><blockquote>
+<p>即猜测一个界，然后用数学归纳法证明界的正确性。(类似于微积分中<em>一阶非齐次线性微分方程</em> 解的公式的推导)<br>使用代入法最好的情况是曾经遇见过很类似的递归式的形式，然后猜测二者解的形式类似</p>
+</blockquote>
+<hr>
+<p>对于<em>归并排序</em> 我们猜测其解为$T(n)=O(n \log_2^n)$(<del>不要问我怎么猜出来的</del>)<br>然后我们来证明解的正确性.<br>我们需要证明<br>当$\exist{N}$使得$n&gt;N$时$T(n)\geq cn\log_2^n$成立。、<br>不证明n=1时的情况是因为因为当$N$很小时我们并不乎。(我们可以把基本情况设置为任意一个我们能够简单证明的数值)，即将归纳证明中的基本情况与递归式中的基本情况区分开来</p>
+<blockquote>
+<p>首先观察当$N=2$(<em>将N=2作为归纳证明的基本情况</em>)时,$T(1)=1$从而推导出$T(2)=4,T(3)=5$<br>基本情况讨论完成后，我们只需要寻找$c\geq{1}$使得$T(n)\leq{cn\log_2^n}$,对于我们以及讨论过的基本情况,只需要$T(2)\leq{c<em>2\log_2^2}$和$T(3)\leq{c</em>3*\log{_2^3}}$。观察可知,$\forall{c\geq{2}}$都能保证基本情况$n=2,n=3$成立。<br>所以我们的猜测时正确的，即为$T(n)=O(n \log_2^n)$</p>
+</blockquote>
+<h3 id="递归树法"><a href="#递归树法" class="headerlink" title="递归树法"></a>递归树法</h3><blockquote>
+<p>将递归式转化为树状结构，其<em>节点</em> 为递归产生的代价，累加各层<em>节点</em> 和<em>叶</em> 来求解递归式。</p>
+</blockquote>
+<hr>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="http://q1q8cm6by.bkt.clouddn.com/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg" alt="递归树图示"></h2><h3 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h3><ul>
+<li>主方法可求解形如$T(n) = aT(\frac{n}{b})+f(n)$的界,其中$a \geqq 1,b&gt;1,f(n)已知且为渐近正函数$(n足够大时,函数值均为正的函数)</li>
+<li>$T(n) = aT(\frac{n}{b})+f(n)$该式子描述了&quot;生成a个子问题，每个子问题为原问题规模的$\frac{1}{b}$,解决和合并产生的代价为$f(n)$&quot;</li>
+<li>值得注意的是$\frac{n}{b}$并不一定是整数，但在n足够大时,$\frac{n}{b}$与$[\frac{n}{b}]$并不会影响递归式的渐进性质,所以这里我们都将$\frac{n}{b}$当作$[\frac{n}{b}]$</li>
+</ul>
+<p>使用主方法只需要记忆以下三种情况，套用公式即可</p>
+<blockquote>
+<ol>
+<li>若$\exist\epsilon&gt;0$使$f(n)=O(n^{\log_b^{a-\epsilon}})$则$T(n) = \theta(n^{\log_b^a})$</li>
+<li>若$f(n)=\theta(n^{\log_b^a})$,则$T(n)=\theta(n^{\log_b^a}*\log_2^n)$</li>
+<li>若$\exist\epsilon&gt;0$使$f(n)=\Omega(n^{\log_b^{a+\epsilon}})$,且对于某个常数$c&gt;1,\exist{N}&gt;0$使得当$n&gt;N$时,有$af(\frac{n}{b})\leq{c*f(n)}$,则$T(n)=\theta(f(n))$</li>
+</ol>
+</blockquote>
+<hr>
+<p> 主方法来分析<em>归并排序</em><br> $$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>仅考虑$n&gt;1$的情况,用主方法的形式对应上式$a=2,b=2,f(n)=\theta(n)$<br>显然此时满足<em>情况2</em> ,故$T(n) =\theta(n\log_2^n)$\</p>
+<blockquote>
+<p>主方法的证明将会在有空的时候给出( <del>写公式太恶心心了</del>),而且主方法的证明篇幅足够再水一周的博客了hhhhhh。</p>
+</blockquote>
+<hr>
+<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>又水了一周hhhhhh<br>但是其实分析性能还是很有意思的一个事情(<del>才没有233</del>)</p>
 
       
     </div>
@@ -374,15 +394,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/Merge_sort/" rel="next" title="归并排序">
+                <i class="fa fa-chevron-left"></i> 归并排序
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/Merge_sort/" rel="prev" title="归并排序">
-                归并排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -505,7 +525,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插入排序"><span class="nav-number">1.</span> <span class="nav-text">插入排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#思想"><span class="nav-number">1.1.</span> <span class="nav-text">思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本信息"><span class="nav-number">1.2.</span> <span class="nav-text">基本信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体实现"><span class="nav-number">1.3.</span> <span class="nav-text">具体实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#循环不变式的证明"><span class="nav-number">1.4.</span> <span class="nav-text">循环不变式的证明</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初始"><span class="nav-number">1.4.1.</span> <span class="nav-text">初始</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#保持"><span class="nav-number">1.4.2.</span> <span class="nav-text">保持</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#终止"><span class="nav-number">1.4.3.</span> <span class="nav-text">终止</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#PS"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">PS</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分治策略的思想概述"><span class="nav-number">1.</span> <span class="nav-text">分治策略的思想概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归策略的性能分析"><span class="nav-number">1.1.</span> <span class="nav-text">递归策略的性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#递归策略性能的描述方法"><span class="nav-number">1.1.1.</span> <span class="nav-text">递归策略性能的描述方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归式的求解方法"><span class="nav-number">1.2.</span> <span class="nav-text">递归式的求解方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代入法"><span class="nav-number">1.2.1.</span> <span class="nav-text">代入法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#递归树法"><span class="nav-number">1.2.2.</span> <span class="nav-text">递归树法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-number">1.3.</span> <span class="nav-text"></span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#主方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">主方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#碎碎念"><span class="nav-number">1.4.</span> <span class="nav-text">碎碎念</span></a></li></ol></li></ol></div>
             
 
           </div>
