@@ -86,7 +86,7 @@
 <meta property="og:description" content="分治策略的思想概述分治策略即将问题不断拆分成更小的问题，再对一个足够小的问题进行简单的求解。  递归的基本步骤  分解 : 将问题划分为一些更小的问题，问题形式不变，但规模更小。 解决 : 递归的求解出子问题。如果子问题规模足够小则停止递归(该情况称为进入了基本情况,形象的可以想像为&amp;quot;触底&amp;quot;。 合并 : 将子问题的解组合成原问题的解。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
-<meta property="og:updated_time" content="2019-12-11T14:29:00.579Z">
+<meta property="og:updated_time" content="2019-12-11T14:31:18.886Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
 
@@ -358,6 +358,7 @@
 <blockquote>
 <p><img src="http://q1q8cm6by.bkt.clouddn.com/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg" alt="递归树图示"></p>
 </blockquote>
+<hr>
 <h2 id="主方法"><a href="#主方法" class="headerlink" title="主方法"></a>主方法</h2><ul>
 <li>主方法可求解形如$T(n) = aT(\frac{n}{b})+f(n)$的界,其中$a \geqq 1,b&gt;1,f(n)已知且为渐近正函数$(n足够大时,函数值均为正的函数)</li>
 <li>$T(n) = aT(\frac{n}{b})+f(n)$该式子描述了&quot;生成a个子问题，每个子问题为原问题规模的$\frac{1}{b}$,解决和合并产生的代价为$f(n)$&quot;</li>
@@ -378,7 +379,7 @@
 <p>主方法的证明将会在有空的时候给出( <del>写公式太恶心心了</del>),而且主方法的证明篇幅足够再水一周的博客了hhhhhh。</p>
 </blockquote>
 <hr>
-<h2 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h2><p>又水了一周hhhhhh<br>但是其实分析性能还是很有意思的一个事情(<del>才没有233</del>)</p>
+<h1 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h1><p>又水了一周hhhhhh<br>但是其实分析性能还是很有意思的一个事情(<del>才没有233</del>)</p>
 
       
     </div>
@@ -534,7 +535,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分治策略的思想概述"><span class="nav-number">1.</span> <span class="nav-text">分治策略的思想概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归策略的性能分析"><span class="nav-number">2.</span> <span class="nav-text">递归策略的性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归策略性能的描述方法"><span class="nav-number">2.1.</span> <span class="nav-text">递归策略性能的描述方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归式的求解方法"><span class="nav-number">3.</span> <span class="nav-text">递归式的求解方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代入法"><span class="nav-number">3.1.</span> <span class="nav-text">代入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归树法"><span class="nav-number">3.2.</span> <span class="nav-text">递归树法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主方法"><span class="nav-number">3.3.</span> <span class="nav-text">主方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#碎碎念"><span class="nav-number">3.4.</span> <span class="nav-text">碎碎念</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分治策略的思想概述"><span class="nav-number">1.</span> <span class="nav-text">分治策略的思想概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归策略的性能分析"><span class="nav-number">2.</span> <span class="nav-text">递归策略的性能分析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递归策略性能的描述方法"><span class="nav-number">2.1.</span> <span class="nav-text">递归策略性能的描述方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#递归式的求解方法"><span class="nav-number">3.</span> <span class="nav-text">递归式的求解方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#代入法"><span class="nav-number">3.1.</span> <span class="nav-text">代入法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归树法"><span class="nav-number">3.2.</span> <span class="nav-text">递归树法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主方法"><span class="nav-number">3.3.</span> <span class="nav-text">主方法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#碎碎念"><span class="nav-number">4.</span> <span class="nav-text">碎碎念</span></a></li></ol></div>
             
 
           </div>
