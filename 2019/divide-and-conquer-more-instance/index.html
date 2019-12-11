@@ -86,7 +86,7 @@
 <meta property="og:description" content="分治策略的思想概述分治策略即将问题不断拆分成更小的问题，再对一个足够小的问题进行简单的求解。  递归的基本步骤  分解 : 将问题划分为一些更小的问题，问题形式不变，但规模更小。 解决 : 递归的求解出子问题。如果子问题规模足够小则停止递归(该情况称为进入了基本情况,形象的可以想像为&amp;quot;触底&amp;quot;。 合并 : 将子问题的解组合成原问题的解。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
-<meta property="og:updated_time" content="2019-12-11T13:01:52.824Z">
+<meta property="og:updated_time" content="2019-12-11T14:24:30.246Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http:&#x2F;&#x2F;q1q8cm6by.bkt.clouddn.com&#x2F;%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F%E7%9A%84%E9%80%92%E5%BD%92%E6%A0%91.jpg">
 
@@ -328,7 +328,7 @@
 </ol>
 </blockquote>
 <a id="more"></a>
-<h2 id="递归策略的性能分析"><a href="#递归策略的性能分析" class="headerlink" title="递归策略的性能分析"></a>递归策略的性能分析</h2><h3 id="递归策略性能的描述方法"><a href="#递归策略性能的描述方法" class="headerlink" title="递归策略性能的描述方法"></a>递归策略性能的描述方法</h3><p>我们常用递归式的方式来描述一个递归实例在运行时间上的性能<br>$$ T(n)=\begin{cases}<br>    aT(\frac{n}{b}) + \theta(n) &amp;n&gt;1\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>其中 <strong><em>a</em></strong> 是分解时产生的子问题的个数，每个子问题是原问题规模的$\frac{1}{b}$ <br>当问题的规模足够小时(即n=1时)我们认为解决该问题只需要常数时间(其上界为一个常数)为$\theta(1)$。<br>所以对于<em>归并排序</em> 而言a=b=2。故其运行时间的描述为<br>$$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>对上式求解我们可以得到<em>递归排序</em> 的运行时间的渐近紧上确界为$\theta(n*\lg_2n)$</p>
+<h2 id="递归策略的性能分析"><a href="#递归策略的性能分析" class="headerlink" title="递归策略的性能分析"></a>递归策略的性能分析</h2><h3 id="递归策略性能的描述方法"><a href="#递归策略性能的描述方法" class="headerlink" title="递归策略性能的描述方法"></a>递归策略性能的描述方法</h3><p>我们常用递归式的方式来描述一个递归实例在运行时间上的性能<br>$$ T(n)=\begin{cases}<br>    aT(\frac{n}{b}) + \theta(n) &amp;n&gt;1 \\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>其中 <strong><em>a</em></strong> 是分解时产生的子问题的个数，每个子问题是原问题规模的$\frac{1}{b}$ <br>当问题的规模足够小时(即n=1时)我们认为解决该问题只需要常数时间(其上界为一个常数)为$\theta(1)$。<br>所以对于<em>归并排序</em> 而言a=b=2。故其运行时间的描述为<br>$$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1 \\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>对上式求解我们可以得到<em>递归排序</em> 的运行时间的渐近紧上确界为$\theta(n*\lg_2n)$</p>
 <h2 id="递归式的求解方法"><a href="#递归式的求解方法" class="headerlink" title="递归式的求解方法"></a>递归式的求解方法</h2><p>此处介绍<em>算法导论</em> 中给出的三种求解方法\</p>
 <blockquote>
 <ol>
@@ -370,7 +370,7 @@
 </ol>
 </blockquote>
 <hr>
-<p> 主方法来分析<em>归并排序</em><br> $$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>仅考虑$n&gt;1$的情况,用主方法的形式对应上式$a=2,b=2,f(n)=\theta(n)$<br>显然此时满足<em>情况2</em> ,故$T(n) =\theta(n\log_2^n)$</p>
+<p> 主方法来分析<em>归并排序</em><br> $$ T(n)=\begin{cases}<br>    2T(\frac{n}{2}) + \theta(n) &amp;n&gt;1\\<br>    \theta(1) &amp;n=1<br>\end{cases}$$<br>仅考虑$n&gt;1$的情况,用主方法的形式对应上式$a=2,b=2,f(n)=\theta(n)$<br>显然此时满足<em>情况2</em> ,故$T(n) =\theta(n\log_2^n)$</p>
 <blockquote>
 <p>主方法的证明将会在有空的时候给出( <del>写公式太恶心心了</del>),而且主方法的证明篇幅足够再水一周的博客了hhhhhh。</p>
 </blockquote>
