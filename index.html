@@ -291,6 +291,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tiny-projects/" itemprop="url" rel="index">
+                    <span itemprop="name">Tiny projects</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -460,24 +482,15 @@
 
       
         
-          
-            <h1 id="ccRainbow输出库"><a href="#ccRainbow输出库" class="headerlink" title="ccRainbow输出库"></a>ccRainbow输出库</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>因为输出的好看一点对我来说是困难的，但是下学期有c语言程序设计课。为了作业不这么ugly。所以就写了一个可以在shell中简单输出颜色的工具</p>
+          <h1 id="ccRainbow输出库"><a href="#ccRainbow输出库" class="headerlink" title="ccRainbow输出库"></a>ccRainbow输出库</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>因为输出的好看一点对我来说是困难的，但是下学期有c语言程序设计课。为了作业不这么ugly。所以就写了一个可以在shell中简单输出颜色的工具</p>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p><a href="https://github.com/GuoZi-Fairy/cRainbowConsole" target="github链接">超链接名</a><br><a href="https://gitee.com/bupt_xyg/cRainbowconsole" target="gitee链接">超链接名</a><br>见项目说明README</p>
-<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><p>这个库里面仅有一个接口函数<code>rainbow_print(char*)</code>。实现了对字符串<code>&quot;{color-code}string...{color-code}string...&quot;</code>的输出并按照<code>{color-code}</code>为字符串上色.</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><h4 id="解析字符串"><a href="#解析字符串" class="headerlink" title="解析字符串"></a>解析字符串</h4><p>我们只是为标准输出函数<code>printf</code>套了一个壳，使用我们只需要解析出颜色代码即可.为了解析形如<code>{red}</code>的颜色代码，并将一个字符串以不同颜色分割为多个字符串。以经验来看可以使用栈来进行符号配对。</p>
-<h5 id="考虑解析情况"><a href="#考虑解析情况" class="headerlink" title="考虑解析情况"></a>考虑解析情况</h5><p>我们的解析分为两步：</p>
-<ol>
-<li>将<code>&quot;{color1}string1....{color2}string2.....{color3}string3....&quot;</code>依次读取出<code>&quot;{color1}string1....&quot;</code> <code>&quot;{color2}string2...&quot;</code> <code>&quot;{color3}string3...&quot;</code></li>
-<li>将读取出的<code>{color}string...</code>解析为<code>item.color = color-code</code> <code>item.context = string...</code><br>为了完成上述的第一步，使用以下读取规则:<blockquote>
-<p>若读入’{‘ 弹出栈中所有元素解析并输出<br>若读入’\‘ 则检查是否为’{‘或’}‘ 若是则不触发栈操作，并正常压栈<br>若读入’\0’ 则弹出栈中所有元素解析并输出并结束<br>读入其他元素，则直接压入栈中<br>为了完成上述的第二步，使用以下的解析规则<br>仅解析获取字符串的第一个字符<br>若解析到<code>{</code> 则一直向后读取字符直到<code>}</code>并构成新的字符串，再将该字符串与颜色字符串匹配，若匹配成功，则返回对应的颜色代码，若匹配失败则返回null.</p>
-<blockquote>
-<p>若在读取中读取到了<code>&#39;\0&#39;</code>则抛出错误。<br>解析颜色代码成功后，设置输出颜色，并将字符串输出<br>若解析到了普通的字符,则直接将字符串输出</p>
-</blockquote>
-</blockquote>
-<h5 id="格式控制符"><a href="#格式控制符" class="headerlink" title="格式控制符"></a>格式控制符</h5>因为其本质还是使用<code>printf</code>进行输出，所以不需要重新编写格式控制符的解析器,只需在解析到<code>%</code>时一直读取字符直到读取到<code>[d,e,u,s,c,p,...]</code>等标志控制符末尾的字符时，将读取到的字符串按照对应的类型使用<code>printf</code>输出即可</li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/ccRainbow%E5%B7%A5%E5%85%B7/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1019,7 +1032,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
