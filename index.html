@@ -249,6 +249,353 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="guozi.pub/2020/C%E8%AF%AD%E8%A8%80%E4%B8%B2%E8%AE%B2%E8%AF%AD%E6%B3%95%E8%B5%84%E6%96%99/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xyg">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="果子成精的玄学记录册">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/C%E8%AF%AD%E8%A8%80%E4%B8%B2%E8%AE%B2%E8%AF%AD%E6%B3%95%E8%B5%84%E6%96%99/" itemprop="url">C语言串讲语法资料</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-18T21:38:46+08:00">
+                2020-06-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-Speech-for-2020-06-19/" itemprop="url" rel="index">
+                    <span itemprop="name">C Speech for 2020/06/19</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><h2 id="C程序代码结构结构"><a href="#C程序代码结构结构" class="headerlink" title="C程序代码结构结构"></a>C程序代码结构结构</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> ...</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="C程序的生命周期"><a href="#C程序的生命周期" class="headerlink" title="C程序的生命周期"></a>C程序的生命周期</h3><ol>
+<li>代码(*.h 和 *.c)</li>
+<li>预编译后的代码(*.i)</li>
+<li>编译(*.S)</li>
+<li>链接(可执行程序)</li>
+</ol>
+<h3 id="声明型"><a href="#声明型" class="headerlink" title="声明型"></a>声明型</h3><ul>
+<li><p>声明整数变量 int|long|long long|short|char|…</p>
+</li>
+<li><p>声明浮点数变量 float|double|…</p>
+</li>
+<li><p>声明指针 <code>type *var;</code></p>
+</li>
+<li><p>声明数组 <code>type array[static_size];</code></p>
+</li>
+<li><p>声明结构体 <code>struct var_ID {...args};</code></p>
+</li>
+<li><p>声明联合体 <code>union var_ID {...args};</code></p>
+</li>
+<li><p>声明类型别称 <code>typedef [struct|union] typeID;</code></p>
+</li>
+<li><p>声明函数指针 <code>type (*func_p)(args...);</code></p>
+</li>
+<li><p>声明函数体 <code>[static|extern] type [[__cdecl | fastcal | stdcal]] function_ID(args...);</code></p>
+</li>
+</ul>
+<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3><ul>
+<li>数值运算符: + - * / %</li>
+<li>位运算符: &lt;&lt; &gt;&gt; &amp; | ^ </li>
+<li>逻辑运算符: &amp;&amp; || !</li>
+<li>层级运算符: ( )</li>
+<li>指针运算符: &amp;  *</li>
+<li>取尺寸运算符: sizeof</li>
+<li>递变运算符: ++ –</li>
+<li>复合赋值运算符: += -= /= *= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;=</li>
+<li>三元逻辑运算符: <code>expression ? res1:res2</code></li>
+</ul>
+<h3 id="逻辑分支结构"><a href="#逻辑分支结构" class="headerlink" title="逻辑分支结构"></a>逻辑分支结构</h3><h4 id="if结构"><a href="#if结构" class="headerlink" title="if结构"></a>if结构</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="comment">// 多语句</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (expression) </span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        stataments;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//  单语句</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">if</span> (expression)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        statament;</span></pre></td></tr></table></figure>
+
+<h4 id="switch结构"><a href="#switch结构" class="headerlink" title="switch结构"></a>switch结构</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span> (expression)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">case</span> static_value1:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        stataments;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        [<span class="keyword">break</span>]; <span class="comment">//可选  但通常必选</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">case</span> ...:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line">        ....</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">default</span>:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">        ....</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">18</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><h4 id="for"><a href="#for" class="headerlink" title="for"></a>for</h4><p><code>for</code>实际上是<code>foreach</code>,即遍历(对每一个)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//多语句情况</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> (statament1;statament2;statament3)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">        stataments;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">        ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">    &#125;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line"><span class="comment">//单语句情况</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> (statament1;statament2;statament3)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">        statament;</span></pre></td></tr></table></figure>
+
+<h4 id="while"><a href="#while" class="headerlink" title="while"></a>while</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(expression)</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    stataments;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h4 id="goto"><a href="#goto" class="headerlink" title="goto"></a>goto</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">loop_token:</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">    stataments;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="keyword">goto</span> loop_token;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">...</span></pre></td></tr></table></figure>
+
+<h4 id="递归循环"><a href="#递归循环" class="headerlink" title="递归循环"></a>递归循环</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line"><span class="function">type <span class="title">func</span><span class="params">(args)</span></span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="function"></span>&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">    ...</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">    <span class="keyword">return</span> func(args);</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+
+<h2 id="宏指令"><a href="#宏指令" class="headerlink" title="宏指令"></a>宏指令</h2><h3 id="define"><a href="#define" class="headerlink" title="define"></a>define</h3><h3 id="include"><a href="#include" class="headerlink" title="include"></a>include</h3><h3 id="undef"><a href="#undef" class="headerlink" title="undef"></a>undef</h3><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><h3 id="ifdef"><a href="#ifdef" class="headerlink" title="ifdef"></a>ifdef</h3><h3 id="ifndef"><a href="#ifndef" class="headerlink" title="ifndef"></a>ifndef</h3><h3 id="elif"><a href="#elif" class="headerlink" title="elif"></a>elif</h3><h3 id="endif"><a href="#endif" class="headerlink" title="endif"></a>endif</h3><h3 id="error"><a href="#error" class="headerlink" title="error"></a>error</h3><h3 id="LINE"><a href="#LINE" class="headerlink" title="LINE"></a><strong>LINE</strong></h3><h3 id="…"><a href="#…" class="headerlink" title="…"></a>…</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="guozi.pub/2020/C%E8%AF%AD%E8%A8%80%E4%B8%B2%E8%AE%B2%E4%B9%A0%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xyg">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="果子成精的玄学记录册">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/C%E8%AF%AD%E8%A8%80%E4%B8%B2%E8%AE%B2%E4%B9%A0%E9%A2%98/" itemprop="url">C语言串讲习题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-18T21:38:34+08:00">
+                2020-06-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-Speech-for-2020-06-19/" itemprop="url" rel="index">
+                    <span itemprop="name">C Speech for 2020/06/19</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="luogu习题"><a href="#luogu习题" class="headerlink" title="luogu习题"></a>luogu习题</h1><h2 id="循环-数组"><a href="#循环-数组" class="headerlink" title="循环+数组"></a>循环+数组</h2><p><a href="https://www.luogu.com.cn/problem/P1035" target="_blank" rel="noopener">P1035</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P1047" target="_blank" rel="noopener">P1047</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P2550" target="_blank" rel="noopener">P2550</a></p>
+<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><p><a href="https://www.luogu.com.cn/problem/P1597" target="_blank" rel="noopener">P1597</a></p>
+<p><a href="https://www.luogu.com.cn/problem/P1765" target="_blank" rel="noopener">P1765</a></p>
+<h1 id="学校习题"><a href="#学校习题" class="headerlink" title="学校习题"></a>学校习题</h1><h2 id="静态数组"><a href="#静态数组" class="headerlink" title="静态数组"></a>静态数组</h2><p><img src="https://i.loli.net/2020/06/18/IbQcskCVEHRO8tr.png" alt="静态数组1"></p>
+<p><img src="https://i.loli.net/2020/06/18/5HQqdZaDvWGSjzO.png" alt="静态数组2.png"></p>
+<h2 id="基础算法思想"><a href="#基础算法思想" class="headerlink" title="基础算法思想"></a>基础算法思想</h2><p><img src="https://i.loli.net/2020/06/18/LXe7C5AWIgZUDMs.png" alt="基础算法思想"></p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p><img src="https://i.loli.net/2020/06/18/4ZTbhAjSiIQ86OV.png" alt="递归1.png"></p>
+<p><img src="https://i.loli.net/2020/06/18/wWkPYFfNb3ERA6r.png" alt="递归2.png"></p>
+<h2 id="qsort"><a href="#qsort" class="headerlink" title="qsort"></a>qsort</h2><p><img src="https://i.loli.net/2020/06/18/uJTrmIYRCkj8ONV.png" alt="qsort1"></p>
+<p><img src="https://i.loli.net/2020/06/18/9gm2Llywpa4RqhP.png" alt="qsort2"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="guozi.pub/2020/cMENU%E5%B7%A5%E5%85%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1010,7 +1357,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1021,7 +1368,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
